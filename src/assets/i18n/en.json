@@ -1,3 +1,6 @@
 {
-  "title": "Management Panel"
+  "title": "Painel de Gestão",
+  "link-management-panel": "Management Panel",
+  "page-login-email": "Email",
+  "page-login-password": "Password"
 }

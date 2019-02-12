@@ -1,3 +1,6 @@
 {
-  "title": "Painel de Gestão"
+  "title": "Painel de Gestão",
+  "link-management-panel": "Painel de Gestão",
+  "page-login-email": "E-mail",
+  "page-login-password": "Senha"
 }
