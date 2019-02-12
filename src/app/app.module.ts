@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslateService } from './shared/services/translate.service';
+import { TranslatePipe } from './shared/pipes/translate.pipe';
 
 export function setupTranslateFactory(
   service: TranslateService): Function {
@@ -13,7 +14,8 @@ export function setupTranslateFactory(
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
