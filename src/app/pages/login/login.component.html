@@ -1,0 +1,49 @@
+<div class="container container-page-fixed bg-login"></div>
+<div class="block bg-dark"></div>
+<div class="block">
+  <div class="wrapper">
+    <div class="flex-container flex-container-padding-default">
+      <div class="container container-padding-default info-login flex-item flex-container flex-container-space-between">
+        <figure class="center">
+          <img src="assets/img/logo/logo.png" alt="Logo Management Panel">
+        </figure>
+
+        <h4 class="text-center padding-1"> titulo </h4>
+
+        <p class="text-center padding-1"> descr </p>
+      </div>
+
+      <div class="container container-padding-default login-form flex-item">
+        <form class="form-login-component" formGroup="userCredentialsForm">
+
+          <h2 class="wdt100">{{ 'form.login.title' | translate }}</h2>
+
+          <div class="wdt100 pdt1rem">
+            <label for="login-input-email" class="input-float-label">
+              <input type="email" id="login-input-email" placeholder="&nbsp;" formControlName="email" required />
+              <span class="input-float">{{ 'page-login-email' | translate }}</span>
+            </label>
+          </div>
+
+          <div class="wdt100 pdt1rem">
+            <label for="login-input-password" class="input-float-label">
+              <input type="password" id="login-input-password" placeholder="&nbsp;" formControlName="password" required />
+              <span class="input-float">{{ 'page-login-password' | translate }}</span>
+            </label>
+          </div>
+
+          <!-- TODO-stp2201: colocar signup -->
+          <div class="wdt100 pdt1rem">
+            <!--<button class="button-radius-secondary" (click)="signUp()">{{ 'button.register' | translate}}</button>-->
+            <button class="button-radius-primary fl-right" (click)="signIn()" id="login-button-save" [ngClass]="loading ? 'disable' : ''" >
+              <div id="login-spinner-save">
+              </div>
+              <span *ngIf="!loading">{{ 'button.enter' | translate}}</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
