@@ -1,0 +1,23 @@
+@import 'src/assets/sass/colors.scss';
+
+.box-link-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  .box-link {
+    height: 150px;
+    width: 150px;
+    border-radius: 6px;
+    background-color: $dark-blue;
+    color: $light-blue;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $light-blue;
+      color: $dark-blue;
+    }
+  }
+}
