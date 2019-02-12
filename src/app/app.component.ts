@@ -1,18 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { TranslateService } from './shared/services/translate.service';
+import { AuthService } from './shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  public userAuthenticated: boolean;
 
-  public setLang(lang: string): void {
-    this.translate.use(lang);
+  constructor(
+    private authService: AuthService
+  ) { }
+
+  ngOnInit() {
+    this.verifyUserAuthenticated();
+  }
+
+  private verifyUserAuthenticated(): void {
+    this.authService.verifyAuthUser.subscribe(userAuthenticated => {
+      console.log('userAuthenticated', userAuthenticated);
+      this.userAuthenticated = userAuthenticated;
+    });
   }
 
 }
