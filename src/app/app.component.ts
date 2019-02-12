@@ -9,8 +9,10 @@ import { TranslateService } from './shared/services/translate.service';
 })
 export class AppComponent {
 
-  constructor(private translate: TranslateService) {
-    console.log(translate.data);
+  constructor(private translate: TranslateService) { }
+
+  public setLang(lang: string): void {
+    this.translate.use(lang);
   }
 
 }
