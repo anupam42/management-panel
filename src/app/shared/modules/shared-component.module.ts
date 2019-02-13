@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MaterialModule } from './material.module';
 import { TranslatePipe } from './../pipes/translate.pipe';
 import { TranslateService } from '../services/translate.service';
 
@@ -22,14 +21,12 @@ export function setupTranslateFactory(service: TranslateService): Function {
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    MaterialModule
   ],
   exports: [
     CommonModule,
     RouterModule,
     HttpClientModule,
-    MaterialModule,
-    TranslatePipe
+    TranslatePipe,
   ],
   providers: [
     TranslateService,

@@ -43,7 +43,6 @@ export class AuthService {
     const userDataLocalStorage = this.storageService.getValueFromKeyStorage('token');
     if (userDataLocalStorage) {
       this.changeLogged(true);
-      this.router.navigate(['/home']);
     }
   }
 

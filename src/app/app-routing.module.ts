@@ -9,6 +9,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', loadChildren: './pages/home/home.module#HomeModule', canActivate: [ AuthGuard ] },
+  {
+    path: 'management-panel',
+    loadChildren: './pages/management-panel/management-panel.module#ManagementPanelModule',
+    canActivate: [ AuthGuard ]
+  },
   { path: '', pathMatch: 'full', redirectTo: '/home', canActivate: [ AuthGuard ] },
   { path: '**', component: NotFoundComponent }
 ];
