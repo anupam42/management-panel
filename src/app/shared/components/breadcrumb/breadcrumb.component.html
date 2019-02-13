@@ -1,0 +1,6 @@
+<ul class="breadcrumb-container">
+  <li *ngFor="let breadcrumb of breadcrumbs; let i = index" class="breadcrumb-item">
+    <a routerLink="{{ breadcrumb.url }}" class="breadcrumb-item-link">{{ breadcrumb.label }}</a>
+    <span *ngIf="i < breadcrumbs.length - 1" class="breadcrumb-item-division">></span>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+@import 'src/assets/sass/colors.scss';
+
+.breadcrumb-container {
+  display: flex;
+
+  .breadcrumb-item {
+    list-style: none;
+
+    .breadcrumb-item-link {
+      padding: 1rem 0rem;
+      border-radius: 50%;
+      color: $dark-grey;
+    }
+
+    .breadcrumb-item-division {
+      padding: 1rem;
+    }
+  }
+}
