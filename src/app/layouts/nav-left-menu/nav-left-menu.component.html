@@ -1,10 +1,25 @@
-<aside>
+<aside class="nav-left">
   <div class="search-box">
-    <input type="text" placeholder="Pesquise aqui">
+    <input type="text" class="input-search" placeholder="Pesquise aqui">
   </div>
-  <ul class="">
-    <li>Painel de Gestão</li>
-    <li>Conta Digital</li>
-    <li>Ant. de Recebíveis</li>
+  <ul class="nav-links">
+    <li>
+      <a [routerLink]="['/home/management-panel']" routerLinkActive="active-link" class="nav-link">
+        <span class="sprite" aria-label="Painel de Gestão"></span>
+        Painel de Gestão
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/home/digital-account']" routerLinkActive="active-link" class="nav-link">
+        <span class="sprite sprite-digital-account" aria-label="Conta Digital"></span>
+        Conta Digital
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/home/anticipation']" routerLinkActive="active-link" class="nav-link">
+        <span class="sprite sprite-digital-anticipation" aria-label="Ant. de Recebíveis"></span>
+        Ant. de Recebíveis
+      </a>
+    </li>
   </ul>
 </aside>

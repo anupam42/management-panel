@@ -11,11 +11,11 @@ describe('AuthService', () => {
   });
 
   it('user is valid', inject([AuthService], (service: AuthService) => {
-    expect(service.signIn('test@test.com', '123456')).toBeTruthy();
+    expect(service.signIn('sandra@test.com', '123456')).toBeTruthy();
   }));
 
   it('user is invalid', inject([AuthService], (service: AuthService) => {
-    expect(service.signIn('test@fail.com', '123123')).toBeFalsy();
+    expect(service.signIn('sandra@fail.com', '123123')).toBeFalsy();
   }));
 
 });

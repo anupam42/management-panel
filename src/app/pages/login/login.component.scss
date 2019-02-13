@@ -1,0 +1,85 @@
+@import 'src/assets/sass/colors.scss';
+@import 'src/assets/sass/variables.scss';
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-grey;
+
+  .login-container {
+    background-color: $light-blue;
+    padding: $high-padding;
+    display: flex;
+    align-items: center;
+
+    .login-box {
+      padding: $low-padding;
+      color: $white;
+      width: 15rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.input-float-label {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  cursor: text;
+  background: none;
+
+  .input-float {
+    position: absolute;
+    top: 0.4rem;
+    left: 0rem;
+    font-size: 14px;
+    color: $light-grey;
+    font-weight: 500;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: all .2s ease;
+  }
+
+  input {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    padding: 1rem 0rem 0.5rem 0rem;
+    font-weight: 500;
+    border-bottom: 1px solid $light-grey;
+    border-radius: 0;
+    color: $white;
+    transition: all .15s ease;
+    background-color: $light-blue;
+
+    &:not(:placeholder-shown) {
+      + span {
+        color: $white;
+        transform: translateY(-20px) scale(.8);
+      }
+    }
+
+    &:focus {
+      background: none;
+      outline: none;
+      + span {
+        transform: translateY(-20px) scale(.8);
+        + .border {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.login-button {
+  background: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  color: $light-blue;
+  float: right;
+  margin-top: 1rem;
+}

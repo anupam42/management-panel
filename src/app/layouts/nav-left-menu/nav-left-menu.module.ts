@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { NavLeftMenuComponent } from './nav-left-menu.component';
@@ -8,7 +9,8 @@ import { MaterialModule } from './../../shared/modules/material.module';
     NavLeftMenuComponent
   ],
   imports: [
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports: [
     NavLeftMenuComponent

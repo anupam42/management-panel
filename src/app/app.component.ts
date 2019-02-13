@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
 
   private verifyUserAuthenticated(): void {
     this.authService.verifyAuthUser.subscribe(userAuthenticated => {
-      console.log('userAuthenticated', userAuthenticated);
       this.userAuthenticated = userAuthenticated;
     });
   }

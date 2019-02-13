@@ -11,10 +11,12 @@ import { LoginModule } from './pages/login/login.module';
 import { NavTopModule } from './layouts/nav-top-menu/nav-top-menu.module';
 import { NavLeftModule } from './layouts/nav-left-menu/nav-left-menu.module';
 import { NotFoundModule } from './pages/not-found/not-found.module';
+import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

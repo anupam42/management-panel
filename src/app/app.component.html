@@ -5,10 +5,15 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <div>MENU</div>
-    <app-nav-top-menu></app-nav-top-menu>
-    <router-outlet *ngIf="userAuthenticated"></router-outlet>
+    <app-nav-top-menu>
+      <div class="menu-icon" (click)="sidenav.toggle()"><i class="fas fa-bars"></i></div>
+    </app-nav-top-menu>
+    <div class="app-breadcrumb">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="app-main">
+      <router-outlet *ngIf="userAuthenticated"></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

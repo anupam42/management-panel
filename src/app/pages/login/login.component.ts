@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   public signUp() { }
 
   public signIn() {
-    this.authService.signIn('test@test.com', '123456');
+    this.authService.signIn('sandra@test.com', '123456');
   }
 
   private isLoading(loading) {

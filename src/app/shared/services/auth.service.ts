@@ -26,8 +26,8 @@ export class AuthService {
   }
 
   public signIn(email: string, password: string): boolean {
-    if (email === 'test@test.com' && password === '123456') {
-      this.storageService.setItemStorage('token', JSON.stringify({ email, password }));
+    if (email === 'sandra@test.com' && password === '123456') {
+      this.storageService.setItemStorage('userdata', JSON.stringify({ email, password }));
       this.changeLogged(true);
       this.router.navigate(['/home']);
       return true;
@@ -37,10 +37,14 @@ export class AuthService {
     }
   }
 
-  public signOut(): void { }
+  public signOut(): void {
+    this.storageService.clearStorage();
+    this.router.navigate(['/login']);
+    this.changeLogged(false);
+  }
 
   private verifySessionExists() {
-    const userDataLocalStorage = this.storageService.getValueFromKeyStorage('token');
+    const userDataLocalStorage = this.storageService.getValueFromKeyStorage('userdata');
     if (userDataLocalStorage) {
       this.changeLogged(true);
     }

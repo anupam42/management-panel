@@ -1,7 +1,70 @@
 @import 'src/assets/sass/colors.scss';
+@import 'src/assets/sass/variables.scss';
 
-.search-box {
-  height: 4rem;
+/deep/ .mat-drawer-inner-container {
+  background-color: $dark-blue;
 }
 
-@media all and (max-width: 600px) { }
+.nav-left {
+  color: $white;
+
+  .search-box {
+    height: #{ $nav-height };
+
+    .input-search {
+      height: 1.75rem;
+      width: 82%;
+      padding: 1rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      border-top: 1px solid $light-blue;
+
+      &:nth-last-child(1) {
+        border-bottom: 1px solid $light-blue;
+      }
+    }
+
+    .nav-link {
+      padding: 1rem;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: $white;
+
+      .sprite {
+        background-image: url('src/assets/img/sprite.png');
+        background-repeat: no-repeat;
+        background-position: -5px -5px;
+        display: block;
+        height: 40px;
+        width: 40px;
+
+        &.sprite-digital-account {
+          background-position: -5px -55px;
+        }
+
+        &.sprite-digital-anticipation {
+          background-position: -5px -105px;
+        }
+      }
+
+      &.active-link {
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right: 10px solid $light-grey;
+
+        }
+      }
+    }
+  }
+}

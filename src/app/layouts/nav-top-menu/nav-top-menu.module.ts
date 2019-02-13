@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { NavTopMenuComponent } from './nav-top-menu.component';
@@ -8,6 +9,7 @@ import { MaterialModule } from './../../shared/modules/material.module';
     NavTopMenuComponent
   ],
   imports: [
+    CommonModule,
     MaterialModule
   ],
   exports: [

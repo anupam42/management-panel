@@ -1,3 +1,93 @@
-<main>
-  <h1>PAINEL DE GESTÃO</h1>
+<!-- TODO: i18n -->
+<main class="management-panel">
+  <div class="management-panel-header">
+    <div class="management-panel-title">
+      <span class="sprite-test" aria-label="Painel de Gestão"></span>
+      <h1 class="title">Painel de Gestão</h1>
+    </div>
+
+    <div class="management-panel-group">
+      <div class="management-panel-product">
+        <div class="product">
+          Produto:
+        </div>
+        <div class="select">
+          <select>
+            <option disabled="true">Todos</option>
+            <option *ngFor="let product of products" [value]="product.id"> {{ product.name }} </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="management-panel-body">
+    <div class="box-shadow">
+      <div class="box-shadow-title">
+        <div class="title">
+          Atalhos
+        </div>
+      </div>
+
+      <div class="box-shadow-body">
+        <div class="body">
+          <div>
+            Operacional
+          </div>
+          <div class="ops">
+            <div *ngFor="let op of ops">
+              <button class="shortchut">{{ op }}</button>
+            </div>
+          </div>
+        </div>
+        <div class="gen">
+          Geral
+          <button *ngFor="let gen of gens" class="shortchut">{{ gen }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-shadow">
+      <div class="box-shadow-title">
+        <div class="title">
+          Alertas
+        </div>
+        <div class="more-info">
+          Últimos 5 dias
+        </div>
+      </div>
+
+      <div class="box-shadow-body">
+        <div class="alert-container">
+          <div class="alert-item">
+            <div>23 Notas Canceladas</div>
+          </div>
+
+          <div class="alert-item">
+            <div>13 Notas canceladas</div>
+            <div>
+              <div class="select">
+                <select>
+                  <option disabled="true">Ações</option>
+                  <option *ngFor="let action of actions" [value]="action.id"> {{ action.name }} </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-item">
+            <div>7 Assinaturas Digital</div>
+            <div>
+              <div class="select">
+                <select>
+                  <option disabled="true">Ações</option>
+                  <option *ngFor="let action of actions" [value]="action.id"> {{ action.name }} </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>

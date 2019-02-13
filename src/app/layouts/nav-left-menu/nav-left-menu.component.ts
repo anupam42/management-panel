@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Subject } from 'rxjs';
 import { AuthService } from './../../shared/services/auth.service';
@@ -15,7 +16,8 @@ export class NavLeftMenuComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private router: Router
   ) { }
 
   ngOnInit() { }

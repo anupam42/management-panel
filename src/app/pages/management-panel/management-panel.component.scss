@@ -1,2 +1,134 @@
 @import 'src/assets/sass/colors.scss';
+@import 'src/assets/sass/variables.scss';
 
+.management-panel {
+  min-height: calc(100vh - $nav-height);
+  display: flex;
+  flex-direction: column;
+
+  .management-panel-header {
+    display: flex;
+    justify-content: space-between;
+
+    .management-panel-title {
+      display: flex;
+      justify-content: space-between;
+
+      .sprite-test {
+        background-image: url('src/assets/img/gl.png');
+        background-repeat: no-repeat;
+        background-position: -10px -9px;
+        display: block;
+        height: 40px;
+        width: 40px;
+      }
+
+      .title {
+        font-weight: 100;
+      }
+    }
+
+    .management-panel-group {
+      display: flex;
+      justify-content: space-between;
+
+      .management-panel-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .product {
+          padding: $low-padding;
+        }
+      }
+    }
+  }
+
+  .management-panel-body {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 2;
+
+    .box-shadow {
+      height: 400px;
+      width: 49%;
+      margin: 2rem 0rem;
+      background-color: $white;
+      box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+      display: flex;
+      flex-direction: column;
+
+      .box-shadow-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        border-bottom: 1px solid $light-grey;
+
+        .title {
+
+        }
+
+        .more-info {
+
+        }
+      }
+
+      .box-shadow-body {
+        display: flex;
+        justify-content: space-between;
+
+        .body {
+          padding: 2rem 3rem;
+
+          .ops {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-grow: 2;
+          }
+        }
+
+        .gen {
+          border-left: 1px solid $light-grey;
+          padding: 2rem 3rem;
+        }
+
+        button.shortchut {
+          height: 2rem;
+          width: 8rem;
+          margin: 0.5rem 0px;
+          color: $dark-grey;
+          background: transparent;
+          border: 1px solid $light-blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.alert-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid $light-grey;
+
+    .select {
+      height: 2rem;
+    }
+
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+  }
+}

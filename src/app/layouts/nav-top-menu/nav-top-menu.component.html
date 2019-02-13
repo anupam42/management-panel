@@ -1,25 +1,43 @@
 
 <nav class="nav-top-menu">
 
-  <div class="nt-menu-logo">Logo</div>
-
-  <div class="nt-menu-func">
-    <div class="nt-menu-group">
-      Grupo Econômico
+  <div class="nav-top-menu-left">
+    <div class="nav-top-menu-icon">
+      <ng-content></ng-content>
     </div>
-    <div class="nt-menu-profile">
-      <button mat-button [matMenuTriggerFor]="navTopMenu">Username</button>
-      <mat-menu #navTopMenu="matMenu">
-        <button mat-menu-item>Visão Agregada</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
+    <div class="nav-top-menu-logo">
+      <img src="assets/img/logo-srm.png" alt="Logo SRM">
     </div>
   </div>
 
+  <div class="nav-top-menu-right">
+    <div class="nav-top-menu-group">
+      <div class="economic-group">
+        Grupo Econômico:
+      </div>
+      <div class="select">
+        <select>
+          <option disabled="true">Visões</option>
+          <option *ngFor="let economicGroup of economicGroups" [value]="economicGroup.id"> {{ economicGroup.name }} </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="nav-top-menu-profile">
+      <div class="nav-top-menu-user" (click)="openMenuOptions()">
+        <div class="menu-icon">
+          <i class="far fa-user"></i>
+        </div>
+        <div>Sandra Oliveira</div>
+      </div>
+      <div class="nav-top-menu-notifications">
+        <i class="far fa-bell"></i>
+        <span class="badge">{{ notifications }}</span>
+      </div>
+
+    </div>
+  </div>
 </nav>
-
-
-
 
 
 <!--

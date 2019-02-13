@@ -17,11 +17,11 @@ describe('Validando se o usuário está autenticado', () => {
   });
 
   afterEach(() => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('userdata');
   });
 
   it('user is authenticated', inject([AuthGuard], (service: AuthGuard) => {
-    localStorage.setItem('token', 'test@test');
+    localStorage.setItem('userdata', 'sandra@test.com');
     expect(service.canActivate(route, state)).toBeTruthy();
   }));
 

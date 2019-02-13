@@ -1,18 +1,78 @@
 @import 'src/assets/sass/colors.scss';
-
+@import 'src/assets/sass/variables.scss';
 
 .nav-top-menu {
-  height: 4rem;
+  height: #{ $nav-height };
   width: 100%;
-  background-color: red;
+  background-color: $white;
+  @extend %flex-basis;
 
-  .nt-menu-func {
+  .nav-top-menu-left {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .nt-menu-profile {
-      width: 200px;
+  .nav-top-menu-right {
+    @extend %flex-basis;
+
+    .nav-top-menu-group {
+      @extend %flex-basis;
+
+      .economic-group {
+        padding: 1rem;
+      }
+    }
+
+    .nav-top-menu-profile {
+      @extend %flex-basis;
+
+      .nav-top-menu-user {
+        height: 2rem;
+        padding: $low-padding;
+        @extend %flex-basis;
+        background-color: $dark-blue;
+        border: 1px solid $dark-blue;
+        color: $white;
+        cursor: pointer;
+
+        .menu-icon {
+          padding: $low-padding;
+        }
+      }
+
+      .nav-top-menu-notifications {
+        height: 2rem;
+        padding: $low-padding;
+        @extend %flex-basis;
+        background-color: $light-blue;
+        border: 1px solid $light-blue;
+        color: $white;
+        cursor: pointer;
+
+        .fa-bell {
+          margin: $low-padding;
+          margin-right: 0.25rem;
+        }
+      }
     }
   }
 }
 
-@media all and (max-width: 600px) { }
+.badge {
+  font-size: 10px;
+  color: #ffffff;
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  cursor: pointer;
+}
+
+%flex-basis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
