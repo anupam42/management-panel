@@ -1,17 +1,49 @@
+/* ------------------------------------------------------------------------------------------- */
 /* STRUCTURE */
 /* ------------------------------------------------------------------------------------------- */
 * {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
-/* width */
+
 .wdt100 { width: 100%; }
 
-/* padding */
 .pdt1rem { padding-top: 1rem; }
+.pdall2rem { padding: 2rem; }
 
-/* TAG STYLE */
 /* ------------------------------------------------------------------------------------------- */
-a {
-  text-decoration: none;
+/* TAGS */
+/* ------------------------------------------------------------------------------------------- */
+a { text-decoration: none; }
+.txt-center { text-align: center; }
+
+/* ------------------------------------------------------------------------------------------- */
+/* FIELDS */
+/* ------------------------------------------------------------------------------------------- */
+.select {
+  position: relative;
+  height: 3rem;
+  background: transparent;
+  width: fit-content;
+  border: 1px solid $light-blue;
+  min-width: 10rem;
+  text-align: center;
+
+  select {
+    color: $dark-grey;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    padding-right: 35px;
+    padding-left: 15px;
+    background-color: white;
+    background: url("src/assets/img/double-arrow-down.png") 92% / 8% no-repeat;
+    -webkit-appearance: none;
+  }
 }
