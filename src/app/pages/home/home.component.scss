@@ -10,13 +10,30 @@
   .box-link {
     height: 150px;
     width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark-blue;
     border-radius: 6px;
     background-color: $dark-blue;
-    color: $light-blue;
+    color: $white;
     cursor: pointer;
 
+    .box-link-a {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+
     &:hover {
-      background-color: $light-blue;
+      background-color: $white;
       color: $dark-blue;
     }
   }
