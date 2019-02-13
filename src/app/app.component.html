@@ -1,4 +1,18 @@
 
-<router-outlet *ngIf="userAuthenticated"></router-outlet>
+<mat-sidenav-container *ngIf="userAuthenticated && !homeRoute">
+  <mat-sidenav #sidenav [mode]="'side'" class="side-nav-menu">
+    <app-nav-left-menu></app-nav-left-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    <div>MENU</div>
+    <app-nav-top-menu></app-nav-top-menu>
+    <router-outlet *ngIf="userAuthenticated"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<router-outlet *ngIf="userAuthenticated && homeRoute"></router-outlet>
+
 
 <app-login *ngIf="!userAuthenticated"></app-login>
