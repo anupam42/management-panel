@@ -1,7 +1,30 @@
+
 <nav class="nav-top-menu">
 
+  <div class="nt-menu-logo">Logo</div>
+
+  <div class="nt-menu-func">
+    <div class="nt-menu-group">
+      Grupo Econômico
+    </div>
+    <div class="nt-menu-profile">
+      <button mat-button [matMenuTriggerFor]="navTopMenu">Username</button>
+      <mat-menu #navTopMenu="matMenu">
+        <button mat-menu-item>Visão Agregada</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+
+</nav>
+
+
+
+
+
+<!--
   <div>
     <button (click)="setLang('pt-br')">Language: PT-BR</button>
     <button (click)="setLang('en')">Language: EN</button>
   </div>
-</nav>
+-->

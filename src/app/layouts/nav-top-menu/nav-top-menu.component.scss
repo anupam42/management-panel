@@ -1,9 +1,18 @@
 @import 'src/assets/sass/colors.scss';
 
+
 .nav-top-menu {
-  height: 2rem;
+  height: 4rem;
   width: 100%;
   background-color: red;
+
+  .nt-menu-func {
+    display: flex;
+
+    .nt-menu-profile {
+      width: 200px;
+    }
+  }
 }
 
 @media all and (max-width: 600px) { }

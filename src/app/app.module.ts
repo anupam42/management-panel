@@ -5,10 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavModule } from './layouts/nav-top-menu/nav-top-menu.module';
-import { LoginModule } from './pages/login/login.module';
-import { NotFoundModule } from './pages/not-found/not-found.module';
 import { AuthGuard } from './shared/guards/auth.guard';
+import { MaterialModule } from './shared/modules/material.module';
+import { LoginModule } from './pages/login/login.module';
+import { NavTopModule } from './layouts/nav-top-menu/nav-top-menu.module';
+import { NavLeftModule } from './layouts/nav-left-menu/nav-left-menu.module';
+import { NotFoundModule } from './pages/not-found/not-found.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { AuthGuard } from './shared/guards/auth.guard';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MaterialModule,
     HttpClientModule,
-    NavModule,
     LoginModule,
+    NavTopModule,
+    NavLeftModule,
     NotFoundModule
   ],
   providers: [ AuthGuard ],

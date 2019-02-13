@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { NavTopMenuComponent } from './nav-top-menu.component';
-import { SharedModule } from './../../shared/modules/shared-component.module';
+import { MaterialModule } from './../../shared/modules/material.module';
 
 @NgModule({
   declarations: [
     NavTopMenuComponent
   ],
   imports: [
-    SharedModule
+    MaterialModule
   ],
   exports: [
     NavTopMenuComponent
   ]
 })
-export class NavModule { }
+export class NavTopModule { }
